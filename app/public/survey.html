@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  	<div class="col-1"></div>
+	<div class="container col-10">
+		<h1>Survey Time</h1>
+		<form>
+			<div class="form-group">
+				<label for="profile-name">Name</label>
+				<input type="text" class="form-control" id="profile-name" placeholder="Enter name">
+			</div>
+			<div class="form-group">
+				<label for="profile-pic">Photo URL</label>
+				<input type="text" class="form-control" id="profile-pic" placeholder="Enter photo URL">
+			</div>
+			<div class="form-group">
+				<label for="q1">Dinosaurs will make a comeback</p>
+				<select class="form-control w-auto" name="q1" id="q1">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q2">Lebron James is better than Michael Jordan</p>
+				<select class="form-control w-auto" name="q2" id="q2">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q3">Likely to choose tacos over pizza</p>
+				<select class="form-control w-auto" name="q3" id="q3">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q4">If someone offered you one million dollars, you'd accept it</p>
+				<select class="form-control w-auto" name="q4" id="q4">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q5">There was enough room for Jack to float with Rose</p>
+				<select class="form-control w-auto" name="q5" id="q5">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q6">Sasquatch is alive and real</p>
+				<select class="form-control w-auto" name="q6" id="q6">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q7">Peanut Butter and Jelly is the GOAT sandwich</p>
+				<select class="form-control w-auto" name="q7" id="q7">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q8">French toast is top breakfast option</p>
+				<select class="form-control w-auto" name="q8" id="q8">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q9">Not wearing matching clothes bothers you</p>
+				<select class="form-control w-auto" name="q9" id="q9">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="q10">Some professional sports may be rigged</label>
+				<select class="form-control w-auto" name="q10" id="q10">
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (strongly agree)</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<input type="submit" id="submit-button" class="btn btn-primary mb-2 btn-block" data-toggle="modal" data-target="#matchModal">
+			</div>
+
+			<!-- Bootstrap Modal for showing best match on submit -->
+			<div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modalHeader">Best Match</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p id="theName"></p>
+							<img src="" alt="Best Match Photo" id="thePhoto" style="width: 100%">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<br>
+		<footer class="footer">
+			<a href="./">Home Page</a> | 
+			<a href="./api/friends">API Profile List</a> | 
+			<a href="https://github.com/TheLuomamr/friendFinder">Github Repository</a>
+		</footer>
+	</div>
+	<div class="col-1"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+	$("#submit-button").on("click", function(event) {
+		event.preventDefault();
+		//save answers into object
+		let newProfile = {
+			name: $("#profile-name").val().trim(),
+			photo: $("#profile-pic").val().trim(),
+			scores: [
+				$("#q1").val(),
+				$("#q2").val(),
+				$("#q3").val(),
+				$("#q4").val(),
+				$("#q5").val(),
+				$("#q6").val(),
+				$("#q7").val(),
+				$("#q8").val(),
+				$("#q9").val(),
+				$("#q10").val()
+			]
+		};
+		console.log(newProfile);
+		
+		//POST request to API 
+		$.post("/api/friends", newProfile, function(data) {
+			//name and image URL into Modal
+			$("#theName").text(data.name);
+			$("#thePhoto").attr("src", data.photo);
+		});
+	});
+</script>
